@@ -69,9 +69,7 @@
 							login($_POST['email'],$_POST['mdp']);
 						}
 					?>
-					<div class="flex-c-m">
-						<img src="images/smely-logo.png">
-					</div>
+					
 					<h2 align="center">Gestion De Projet - 100 % Productif</h2>
 
 					<div class="flex-col-c p-t-155">
