@@ -28,4 +28,30 @@
         }
         return $nbTaches;
     }
+
+    // Fonction de création de rapport
+    function creationTache($libelle)
+    {
+        require '../ConnexionBDD.php';
+        $requete = $bdd->prepare("INSERT INTO taches(id_projet, libelle, fait) VALUES(:idProjet, :libelle, 0)");
+        $requete->bindParam(':idProjet', $_SESSION['idProjet']);
+        $requete->bindParam(':libelle', $libelle);
+        // exécute
+        if($requete->execute())
+        {
+            echo'<div class="alert alert-success" role="alert">
+                Tache Créée ! veuillez patienter pendant la mise à jour ...
+                </div>';
+            ?>
+
+            <script>
+                    function redirect()
+                    {
+                        document.location.href="../interface/taches.php";
+                    }
+                    setTimeout(redirect,1000);
+            </script>
+            <?php
+        }
+    }
 ?>
