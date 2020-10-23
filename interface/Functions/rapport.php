@@ -9,7 +9,7 @@
         $nbTaches = 1;
         while($rapport = $requete->fetch(PDO::FETCH_ASSOC))
         {
-            echo "<h4><b>Rapport du ".strftime('%d / %m / %Y',strtotime($rapport['date']))." : ".$rapport['libelle']."</b></h4>
+            echo "<h4><b>Rapport du ".strftime('%d / %m / %Y',strtotime($rapport['date']))." : ".$rapport['libelle']."</b> <a href='?supprRapport=true&idRapport=".$rapport['id']."'><button class='btn btn-warning'>supprimer ?</button></a></h4>
                 <p>".$rapport['contenu']."</p><br><br>" ;
         }
     }
@@ -59,6 +59,29 @@
         return $nbRapports;
     }
 
+    function supprRapport($idRapport)
+    {
+        require '../ConnexionBDD.php';
+        $nbRapports = 0;
+        $requete = $bdd->prepare("DELETE FROM rapports WHERE id=".$idRapport);
+        
+        // exécute
+        if($requete->execute())
+        {
+            echo'<div class="alert alert-success" role="alert">
+                Rapport Supprimé ! veuillez patienter pendant la mise à jour ...
+                </div>';
+            ?>
 
+            <script>
+                    function redirect()
+                    {
+                        document.location.href="../interface/rapports.php";
+                    }
+                    setTimeout(redirect,1000);
+            </script>
+            <?php
+        }
+    }
 
 ?>

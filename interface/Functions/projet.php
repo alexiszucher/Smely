@@ -15,19 +15,7 @@
         }
     }
 
-    function getTachesProjet()
-    {
-        require '../ConnexionBDD.php';
-        $requete = $bdd->prepare("SELECT * from taches where id_projet=".$_SESSION['idProjet']);
-        // exécute
-        $requete->execute(); 
-        $nbTaches = 1;
-        while($tache = $requete->fetch(PDO::FETCH_ASSOC))
-        {
-            echo "<h4><b>".$nbTaches.". ".$tache['libelle']."</b></h4>" ;
-            $nbTaches++;
-        }
-    }
+
 
     function getDernierRapport()
     {

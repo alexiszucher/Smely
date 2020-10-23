@@ -87,9 +87,11 @@
               {
                 creationRapport($_POST['libelleRapport'], $_POST['contenuRapport']);
               }
+              if(isset($_GET['supprRapport']) && $_GET['supprRapport'] == true)
+              {
+                supprRapport($_GET['idRapport']);
+              }
             ?>
-
-
 
               <!-- Rapports -->
               <div class="card shadow mb-4">

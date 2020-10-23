@@ -54,4 +54,18 @@
             <?php
         }
     }
+
+    function getTachesProjet()
+    {
+        require '../ConnexionBDD.php';
+        $requete = $bdd->prepare("SELECT * from taches where id_projet=".$_SESSION['idProjet']);
+        // exécute
+        $requete->execute(); 
+        $nbTaches = 1;
+        while($tache = $requete->fetch(PDO::FETCH_ASSOC))
+        {
+            echo "<h4><b>".$nbTaches.". ".$tache['libelle']."&nbsp&nbsp&nbsp</b></h4><a href='?validTache=true&idTache=".$tache['id']."'><button class='btn btn-success'>Valider</button></a>&nbsp&nbsp&nbsp&nbsp<a href='?supprTache=true&idTache=".$tache['id']."'>ou supprimer la tâche ?</a><br><br><br>" ;
+            $nbTaches++;
+        }
+    }
 ?>
