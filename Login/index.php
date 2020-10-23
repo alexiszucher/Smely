@@ -72,7 +72,7 @@
 					<div class="flex-c-m">
 						<img src="images/smely-logo.png">
 					</div>
-					<h2 align="center">Gestion De Prrrrojet - 100 % Productif</h2>
+					<h2 align="center">Gestion De Projet - 100 % Productif</h2>
 
 					<div class="flex-col-c p-t-155">
 						<span class="txt1 p-b-17">
