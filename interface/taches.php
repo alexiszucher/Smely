@@ -45,9 +45,6 @@
                       <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                         <div class="dropdown-header"></div>
                         <a class="dropdown-item" href="?afficher_rapports=true">Afficher tous les rapports</a>
-                        <!--<a class="dropdown-item" href="#">Another action</a>-->
-                        <!--<div class="dropdown-divider"></div>-->
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
                       </div>
                     </div>
                   </div>
@@ -70,6 +67,14 @@
               if(isset($_POST['libelleTache']))
               {
                 creationTache($_POST['libelleTache']);
+              }
+              if(isset($_GET['supprTache']) && $_GET['supprTache'] == true)
+              {
+                supprTache($_GET['idTache']);
+              }
+              if(isset($_GET['validTache']) && $_GET['validTache'] == true)
+              {
+                validTache($_GET['idTache']);
               }
             ?>
 
