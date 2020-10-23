@@ -25,6 +25,7 @@
         while($tache = $requete->fetch(PDO::FETCH_ASSOC))
         {
             echo "<h4><b>".$nbTaches.". ".$tache['libelle']."</b></h4>" ;
+            $nbTaches++;
         }
     }
 
