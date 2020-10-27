@@ -11,7 +11,12 @@
         $requete->execute();
         while($projet = $requete->fetch(PDO::FETCH_ASSOC))
         {
-            echo "<option value='".$projet['id']."'>".$projet['libelle']."</option>";
+            $requete2 = $bdd->prepare("SELECT Count(id) as nbTaches from taches where id_projet=".$projet['id']." AND fait=0");
+            $requete2->execute();
+            while($tache = $requete2->fetch(PDO::FETCH_ASSOC))
+            {
+                echo "<option value='".$projet['id']."'>".$projet['libelle']." -------------> ".$tache['nbTaches']." Tâches en attentes</option>";
+            }
         }
     }
 
