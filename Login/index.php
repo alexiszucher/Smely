@@ -74,7 +74,7 @@
 
 					<div class="flex-col-c p-t-155">
 						<span class="txt1 p-b-17">
-							Version 2.0
+							Version 3.0
 						</span>
 					</div>
 				</form>
