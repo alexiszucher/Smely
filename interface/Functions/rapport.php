@@ -19,13 +19,13 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                                     <div class="dropdown-header"></div>
-                                    <a class="dropdown-item" href="?afficher_rapports=true">Afficher tous les rapports</a>
+                                    <a class="dropdown-item" href="?supprRapport=true&idRapport='.$rapport['id'].'">Supprimer le rapport</a>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="text-center">
-                                <h4><b>'.$rapport['libelle'].'</b> <a href="?supprRapport=true&idRapport='.$rapport['id'].'"><button class="btn btn-warning">supprimer ?</button></a></h4>
+                                <h4><b>'.$rapport['libelle'].'</b></h4>
                                 <br><br>
                                 <p>'.$rapport['contenu'].'</p>
                             </div>
