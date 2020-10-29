@@ -93,7 +93,7 @@
             <script>
                     function redirect()
                     {
-                        document.location.href="../interface/taches.php";
+                        document.location.href="../interface/index.php";
                     }
                     setTimeout(redirect,1000);
             </script>
@@ -117,7 +117,7 @@
             <script>
                     function redirect()
                     {
-                        document.location.href="../interface/taches.php";
+                        document.location.href="../interface/index.php";
                     }
                     setTimeout(redirect,1000);
             </script>

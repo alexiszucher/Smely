@@ -111,41 +111,26 @@
           <!-- Content Row -->
 
           <div class="row">
-
-              <!-- Rapports -->
-            <div class="col-lg-7">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Rapports</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header"></div>
-                        <a class="dropdown-item" href="rapports.php">Afficher tous les rapports</a>
-                        <!--<a class="dropdown-item" href="#">Another action</a>-->
-                        <!--<div class="dropdown-divider"></div>-->
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
-                      </div>
-                    </div>
-                  </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <h4><b>Dernier Rapports</b></h4><br><br>
-                  </div>
-                  <?php
-                    getDernierRapport();
-                  ?>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- Pie Chart -->
-            <div class="col-xl-5 col-lg-6">
+            <div class="col-xl-12 col-lg-12">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
+                <?php 
+
+                  //=========================================================
+                  //                                                        /
+                  //   Traitement de validation et de suppression de tâches /
+                  //                                                        /
+                  //=========================================================
+                  
+                  if(isset($_GET['supprTache']) && $_GET['supprTache'] == true)
+                  {
+                    supprTache($_GET['idTache']);
+                  }
+                  if(isset($_GET['validTache']) && $_GET['validTache'] == true)
+                  {
+                    validTache($_GET['idTache']);
+                  }
+                ?>
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Tâches en attentes</h6>
                   <div class="dropdown no-arrow">
