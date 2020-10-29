@@ -46,37 +46,38 @@
 
             <div class="col-lg-12 mb-4">
 
-            <!--Ajouter un rapport-->
-            <div id="ajouterRapport" class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Ajouter un rapport</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header"></div>
-                        <a class="dropdown-item" href="?afficher_rapports=true">Afficher tous les rapports</a>
-                        <!--<a class="dropdown-item" href="#">Another action</a>-->
-                        <!--<div class="dropdown-divider"></div>-->
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
+              <!--Ajouter un rapport-->
+              <div id="ajouterRapport" class="card shadow mb-4">
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">Ajouter un rapport</h6>
+                      <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                          <div class="dropdown-header"></div>
+                          <a class="dropdown-item" href="?afficher_rapports=true">Afficher tous les rapports</a>
+                          <!--<a class="dropdown-item" href="#">Another action</a>-->
+                          <!--<div class="dropdown-divider"></div>-->
+                          <!--<a class="dropdown-item" href="#">Something else here</a>-->
+                        </div>
                       </div>
                     </div>
-                  </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <h4><b>Ajouter un rapport</b></h4><br><br>
-                  </div>
-                  <form method="post">
-                    <div class="form-group">
-                      <input type="text" name="libelleRapport" class="form-control" id="exampleFormControlInput1" placeholder="Libellé du rapport">
+                  <div class="card-body">
+                    <div class="text-center">
+                      <h4><b>Ajouter un rapport</b></h4><br><br>
                     </div>
-                    
-                    <div class="form-group">
-                      <textarea name="contenuRapport" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Contenu du rapport"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Générer</button>
-                  </form>
+                    <form method="post">
+                      <div class="form-group">
+                        <input type="text" name="libelleRapport" class="form-control" id="exampleFormControlInput1" placeholder="Libellé du rapport">
+                      </div>
+                      
+                      <div class="form-group">
+                        <textarea name="contenuRapport" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Contenu du rapport"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Générer</button>
+                    </form>
+                </div>
               </div>
             </div>
 
@@ -93,32 +94,12 @@
               }
             ?>
 
-              <!-- Rapports -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Rapports</h6>
-                    <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header"></div>
-                        <a class="dropdown-item" href="?afficher_rapports=true">Afficher tous les rapports</a>
-                        <!--<a class="dropdown-item" href="#">Another action</a>-->
-                        <!--<div class="dropdown-divider"></div>-->
-                        <!--<a class="dropdown-item" href="#">Something else here</a>-->
-                      </div>
-                    </div>
-                  </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <h4><b>Rapports de <?php echo $_SESSION['libelleProjet']; ?></b></h4><br><br>
-                  </div>
-                  <?php
-                    getRapports();
-                  ?>
-                </div>
-              </div>
+              
+                    <?php
+                      getRapports();
+                    ?>
+                    
+              
 
 
 
