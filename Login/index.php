@@ -38,7 +38,7 @@
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
 				<form method="post" action="#" class="login100-form validate-form">
 					<span class="login100-form-title p-b-49">
-						Smely 1.0
+						Smely 3.0
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "L'email est requis">
